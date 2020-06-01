@@ -37,7 +37,7 @@ function iterateCareers(careerArray) {
     if (careers[i].boss) {
       console.log(`${careerArray[i].career} ${careerArray[i].name} reports to ${careerArray[i].boss}`);
     } else {
-      console.log(`${careerArray[i].career} ${careerArray[i].name} doesn't report to anybody.`)
+      console.log(`${careerArray[i].career} ${careerArray[i].name} doesn't report to anybody.`);
     }
   }
 }
@@ -45,4 +45,30 @@ function iterateCareers(careerArray) {
 iterateCareers(careers);
 
 //Drill 6
+function decode(encodedPhrase) {
+  let decodedMessage = '';
+  const encoder = {
+    a : 2,
+    b : 3,
+    c : 4,
+    d : 5
+  };
+  for (let i = 0; i < encodedPhrase.length; i++) {
+    if (encodedPhrase[i] in encoder === true && encodedPhrase[i] === 'a') {
+      decodedMessage += encoder.a;
+    } else if (encodedPhrase[i] in encoder === true && encodedPhrase[i] === 'b') {
+      decodedMessage += encoder.b;
+    } else if (encodedPhrase[i] in encoder === true && encodedPhrase[i] === 'c') {
+      decodedMessage += encoder.c;
+    } else if (encodedPhrase[i] in encoder === true && encodedPhrase[i] === 'd') {
+      decodedMessage += encoder.d;
+    } else {
+      decodedMessage += ' ';
+    }
+  }
+  console.log(decodedMessage);
+}
+
+decode('craft block argon meter bells brown croon droop');
+
 
