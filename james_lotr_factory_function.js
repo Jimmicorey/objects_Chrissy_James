@@ -20,22 +20,6 @@ Each character should have the method describe which takes no parameters and pri
 Each character should also have a method called evaluateFight that takes in a character object and returns the following string: "Your opponent takes {x} damage and you receive {y} damage" where x and y are the differences between each characters attack and defense values. If defense exceeds attack, then take zero damage.
 */
 
-/*
-evaluateFight: function() {
-    let x = this.attack - OPPONENT.defense; //OPPONENT DAMAGE
-    let y = OPPONENT.attack - this.defense; //YOUR DAMAGE
-    if (this.defense > OPPONENT.attack) {
-    return y = 0; //YOUR 0 DAMAGE
-    }
-    if (OPPONENT.defense > this.attack) {
-    return x = 0; //OPPONENT 0 DAMAGE
-    }
-    return `Your opponent takes ${x} damage and you receive ${y} damage.`;
-},
-*/
-
-
-
 function createCharacter(name, nickname, race, origin, attack, defense) {
   return {
     name: name,
@@ -49,10 +33,23 @@ function createCharacter(name, nickname, race, origin, attack, defense) {
         `${this.name} is a ${this.race} from ${this.origin}.`
       );
     },
+    evaluateFight: function(opponent) {
+      let damageToCharacter = 0;
+      let damageToOpponent = 0;
+      if (this.defense < opponent.attack) {
+        damageToCharacter = opponent.attack - this.defense; //YOUR DAMAGE
+      } 
+      if (opponent.defense < this.attack) {
+        damageToOpponent = this.attack - opponent.defense; //OPPONENT DAMAGE
+      }
+      console.log(`Your opponent takes ${damageToOpponent} damage and you receive ${damageToCharacter} damage.`);
+    },
   };
 }
 
-const characterOne = createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1);
+let characterOne = createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1);
+let characterTwo = createCharacter('TEST', 'testing', 'tester', 'test', 2, 1);
 characterOne.describe();
-
+characterTwo.describe();
+characterOne.evaluateFight(characterTwo);
 
