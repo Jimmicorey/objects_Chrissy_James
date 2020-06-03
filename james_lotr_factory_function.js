@@ -53,3 +53,29 @@ characterOne.describe();
 characterTwo.describe();
 characterOne.evaluateFight(characterTwo);
 
+
+/*
+Using array literal syntax, create an array characters that calls your factory function for each character in the table above with the relevant parameters. Your characters array should now have 5 objects in it.
+
+Add a new character to characters (make up any attributes not provided):
+
+Arwen Undomiel is a Half-Elf of Rivendell
+Using the .find() function, retrieve your character nicknamed aragorn from characters and then call his describe method.
+
+Using the .filter() function, create a new array from characters that ONLY contains characters of the race Hobbit.
+
+Using the .filter() function, create a new array from characters that ONLY contains characters with attack value above 5.
+
+What if you wanted to equip a weapon for each character and change how they are described? For example:
+
+Gandolf the White is a Wizard of the Middle Earth who uses a wizard staff
+Bilbo Baggings is a Hobbit of the Shire who uses the Ring
+Frodo ... String and Barrow Blade
+Aragon .... Anduril
+Legolas ... Bow and Arrow
+Arwen .... Hadhafang
+How would you change the factory function and other methods?
+*/
+
+let characterPlayers = [];
+
