@@ -122,12 +122,11 @@ peopleOfDC.forEach(function (person) {
 */
 
 
-
-
 //***<<<--- 6. Cracking the code --->>>****
-//the prio-drill that is referenced in this one was never made avaiable to me due to my taking part in the older prep-course and not the revamped new prep-course material.
 
+// FIND ORIGINAL CODE OF CRACKING CODE???
 
+//the prior-drill that is referenced in this one was never made avaiable to me due to my taking part in the older prep-course and not the revamped new prep-course material.
 
 
 

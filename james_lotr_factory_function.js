@@ -55,8 +55,6 @@ characterOne.evaluateFight(characterTwo);
 
 
 /*
-Using array literal syntax, create an array characters that calls your factory function for each character in the table above with the relevant parameters. Your characters array should now have 5 objects in it.
-
 Add a new character to characters (make up any attributes not provided):
 
 Arwen Undomiel is a Half-Elf of Rivendell
@@ -77,5 +75,6 @@ Arwen .... Hadhafang
 How would you change the factory function and other methods?
 */
 
+// Using array literal syntax, create an array characters that calls your factory function for each character in the table above with the relevant parameters. Your characters array should now have 5 objects in it.
 let characterPlayers = [];
 
